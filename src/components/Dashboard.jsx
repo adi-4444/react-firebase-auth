@@ -19,7 +19,7 @@ const Dashboard = () => {
 		}
 	}, [currentUser]);
 	return (
-		<div>
+		<div className='dashboard'>
 			<h1>Welcome to user DashBoard</h1>
 			<h1>Hello {currentUser?.email}</h1>
 			<button onClick={signout}> Sign Out</button>

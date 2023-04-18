@@ -10,7 +10,6 @@ const SignUp = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const { currentUser } = useContext(AuthContext);
-	// const [currentUser, setCurrentUser] = useState(null);
 	const redirect = useNavigate();
 
 	const handleEmailChange = (e) => setEmail(e.target.value);
@@ -32,11 +31,11 @@ const SignUp = () => {
 			redirect("/login");
 		}
 	}, [currentUser]);
-	// console.log(currentUser);
+
 	return (
-		<>
+		<div className='signup'>
 			<h1>Sign Up</h1>
-			<form onSubmit={handleSubmit}>
+			<form onSubmit={handleSubmit} className='form'>
 				<input
 					type='email'
 					placeholder='Email'
@@ -51,8 +50,8 @@ const SignUp = () => {
 				/>
 				<button type='submit'>Submit</button>
 			</form>
-			<Link to='/signup'>Already have an account</Link>
-		</>
+			<Link to='/login'>Already have an account</Link>
+		</div>
 	);
 };
 

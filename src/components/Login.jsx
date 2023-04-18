@@ -46,10 +46,10 @@ const Login = () => {
 	}, [currentUser]);
 
 	return (
-		<>
+		<div className='login'>
 			<h1>Log in</h1>
 
-			<form onSubmit={handleSignIn}>
+			<form onSubmit={handleSignIn} className='form'>
 				<input
 					type='email'
 					placeholder='Email'
@@ -68,7 +68,7 @@ const Login = () => {
 				</button>
 			</form>
 			<Link to='/signup'>Don't have an account</Link>
-		</>
+		</div>
 	);
 };
 
